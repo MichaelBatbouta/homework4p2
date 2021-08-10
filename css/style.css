@@ -1,0 +1,58 @@
+/*
+File: style.css
+Styling for tables and form
+Michael Batbouta, UMass Lowell Computer Science, michael_batbouta@student.uml.edu
+Copyright (c) 2021 by Wenjin. All rights reserved. May be freely copied or
+excerpted for educational purposes with credit to the author.
+updated by Michael Batbouta on august 9, 2021 at 10:30 pm
+*/
+#wrapper{
+	width: 90%; 						/* Width is 80% of page*/
+  	min-width: 600px;					/* Minimum Width is 600 pixels*/
+	margin: auto;						/* Centers wrapper in browser*/
+	background-color: white;
+	display: grid;						/*Grid is how the layout is formated*/
+	grid-template-columns: 300px 1fr; 	/*Fixed width sidebar, variable content*/
+    
+}
+body{
+    min-width: 200px;
+}
+label{
+    text-align: right;
+}
+form{
+    border-style: solid;
+    margin-right: 10%;
+}
+
+#wrapper p{
+    color:red;
+}
+
+/*Table formatting*/
+td{
+    width:75;
+}
+td:nth-child(1){   
+     background-color: lightblue;
+    position: sticky;
+    overflow: visible;
+    left:0;
+}
+ tr:nth-child(1) {
+    background-color: lightblue;
+    position: sticky;
+    overflow: visible;
+    top:0;   
+}
+#myDynamicTable{
+    width:80%;
+     height:80%;
+     overflow:auto;
+     max-height: 700px;
+}
+.error, #toManyDeleted{
+    color:red;
+}
+

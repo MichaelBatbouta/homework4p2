@@ -1,0 +1,76 @@
+<!--
+  File: index
+basic html used in homework 3 and homework 4 part1
+Michael Batbouta, UMass Lowell Computer Science, michael_batbouta@student.uml.edu
+Copyright (c) 2021 by Wenjin. All rights reserved. May be freely copied or
+excerpted for educational purposes with credit to the author.
+updated by Michael Batbouta on august 9, 2021 at 10:30 pm
+resources used
+  resources used
+  https://www.w3schools.com/tags/tag_input.asp
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>title</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.3/themes/hot-sneaks/jquery-ui.css" /> 
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+       
+ 
+    <script src="js/tablecreate.js"></script>
+
+  </head>
+  <body>
+    <!-- page content
+     max and min of type num step = 1 for whole number-->
+    <h1>Multiplication Table Generator</h1>
+    <p>Please enter numbers between -50 and 50 for a multiplication table to be made</p>
+    <div id="wrapper">
+      <form id="dynamicCheck">
+        <label for="minCol">Minimium Column Value:</label>
+        <input id="minCol" name="minCol" type="number" min="-50" max="50" step="1"><br>
+        <p id="minColRes"></p>
+        <div id="minColSlider"></div><br>
+
+        <label for="maxCol">Maximum Column Value:</label>
+        <input id="maxCol" name="maxCol" type="number" min="-50" max="50" step="1"><br>
+        <p id="maxColRes"></p>
+        <div id="maxColSlider"></div><br>
+
+        <label for="minRow">Minimium Row Value:</label>
+        <input id="minRow" name="minRow" type="number" min="-50" max="50" step="1"><br>
+        <p id="minRowRes"></p>
+        <div id="minRowSlider"></div><br>
+
+        <label for="maxRow">Maximum Column Value:</label>
+        <input id="maxRow" name="maxRow" type="number" id="password" min="-50" max="50" step="1"><br>
+        <p id="maxRowRes"></p>
+        <div id="maxRowSlider"></div><br>
+
+        <input type="button" id ="cb" value="Save Table"/>        
+      </form>  
+     <div id="myDynamicTable"></div> 
+    </div>
+    
+    <!-- tab section -->
+    <div id="container-1">
+      <label>Index Number of Tab to be Removed (zero based):</label>
+      <input for="indexValue" id="indexValue" type="number" value="0"><p>
+        <label>number of tables to delete starting at index above:</label>
+      <input for="amount" id="amount" type="number" value="1"><p>
+      <p id="toManyDeleted"></p>
+      <input type="button" id ="removeTabs" value="remove tabs" />
+      <!-- used for the actual tabs-->
+      <ul>
+      </ul> 
+    </div>
+
+  </body>
+</html>
